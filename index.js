@@ -9011,13 +9011,16 @@ const commentCountAcrossIssues = issues
   .reduce((total, count) => total + count, 0);
 
 const openIssues = issue.reduce((openIssues, issue) => {
+  if
+
+  
   const isAutomaticIssue = issue.body.includes('automatically created by learn.co');
 
   if (!isAutomaticIssue) {
     totalIssues.push(issue);
   }
 
-  return openIssues;
+  return totalIssues;
 }, []);
 
 const $tbody = document.getElementById('results');
