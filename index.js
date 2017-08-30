@@ -9017,7 +9017,7 @@ const openIssues = issue.reduce((openIssues, issue) => {
     totalIssues.push(issue);
   }
 
-  return totalIssues;
+  return openIssues;
 }, []);
 
 const $tbody = document.getElementById('results');
