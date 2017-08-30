@@ -9011,9 +9011,14 @@ const commentCountAcrossIssues = issues
   .reduce((total, count) => total + count, 0);
 
 const openIssues = issue.reduce((openIssues, issue) => {
-  if
+  if (issue.state === 'open') {
+    return [...openIssues, issue];
+  }
 
-  
+    return openIssues;
+}, []);
+
+
   const isAutomaticIssue = issue.body.includes('automatically created by learn.co');
 
   if (!isAutomaticIssue) {
