@@ -9021,11 +9021,11 @@ const openIssues = issue.reduce((openIssues, issue) => {
 }, []);
 
 const $tbody = document.getElementById('results');
-$tbody.innerHTML = nonAutomaticIssues
-  .map(issue => `<tr>
-    <td>${issue.body}</td>
-    <td>${issue.created_at}</td>
-    <td>${issue.state}</td>
-    </tr>`
-  )
-  .join('');
+  $tbody.innerHTML = nonAutomaticIssues
+    .map(issue => `<tr>
+      <td>${issue.body}</td>
+      <td>${issue.created_at}</td>
+      <td>${issue.state}</td>
+      </tr>`
+    )
+    .join('');
