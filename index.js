@@ -9009,3 +9009,13 @@ const issuesWithUpdatedApiUrl = issues.map(issue =>
 const commentCountAcrossIssues = issues
   .map(issue => issue.comments_count)
   .reduce((total, count) => total + count, 0);
+
+const openIssues = issue.reduce((openIssues, issue) => {
+  const isAutomaticIssue = issue.body.includes('automatically created by learn.co');
+
+  if (!isAutomaticIssue) {
+    totalIssues.push(issue);
+  }
+
+  return totalIssues;
+}, []);
