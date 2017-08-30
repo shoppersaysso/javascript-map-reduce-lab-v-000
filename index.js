@@ -9018,7 +9018,6 @@ const openIssues = issue.reduce((openIssues, issue) => {
     return openIssues;
 }, []);
 
-
   const isAutomaticIssue = issue.body.includes('automatically created by learn.co');
 
   if (!isAutomaticIssue) {
