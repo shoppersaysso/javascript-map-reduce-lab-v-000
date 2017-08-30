@@ -9019,5 +9019,3 @@ const openIssues = issue.reduce((openIssues, issue) => {
 
   return totalIssues;
 }, []);
-
-
